@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="./estilo.css">
+    <script src="./calculos.js"></script>
+</head>
+
+<body>
+    <div class="center">
+        <div class="text">
+            <span id="x"></span><span id="sinal"></span><span id="y"></span><span id="result"></span>
+        </div>
+        <br>
+        <div>
+            <button class="numeros" onclick="get(1)"> 1 </button>
+            <button class="numeros" onclick="get(2)"> 2 </button>
+            <button class="numeros" onclick="get(3)"> 3 </button>
+            <button class="operadores" onclick="result()">=</button>
+            <br>
+            <button class="numeros" onclick="get(4)"> 4 </button>
+            <button class="numeros" onclick="get(5)"> 5 </button>
+            <button class="numeros" onclick="get(6)"> 6 </button>
+            <button class="operadores" onclick="multiplicar()">x</button>
+            <br>
+            <button class="numeros" onclick="get(7)"> 7 </button>
+            <button class="numeros" onclick="get(8)"> 8 </button>
+            <button class="numeros" onclick="get(9)"> 9 </button>
+            <button class="operadores" onclick="somar()">+</button>
+            <br>
+            <button class="operadores" onclick="dividir()">/</button>
+            <button class="numeros" onclick="get(0)">0</button>
+            <button class="operadores" onclick="subtrair()">-</button>
+            <button class="limpar" onclick="limpar()">CE</button>
+</body>
+
+</html>

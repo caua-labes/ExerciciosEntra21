@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <label for="x">Informe x</label>
+    <input type="number" id="x" />
+    <br />
+    <label for="y">Informe x</label>
+    <input type="number" id="y" />
+    <br />
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">x</button>
+    <button onclick="dividir()">/</button>
+
+    <span id="result"></span>
+    <script>
+        function somar() {
+            var x = parseFloat(document.getElementById("x").value);
+            var y = parseFloat(document.getElementById("y").value);
+            var resultado = x + y;
+            document.getElementById("result").innerHTML = resultado;
+        }
+
+        function subtrair() {
+            var x = parseFloat(document.getElementById("x").value);
+            var y = parseFloat(document.getElementById("y").value);
+            var resultado = x - y;
+            document.getElementById("result").innerHTML = resultado;
+        }
+        function multiplicar() {
+            var x = parseFloat(document.getElementById("x").value);
+            var y = parseFloat(document.getElementById("y").value);
+            var resultado = x * y;
+            document.getElementById("result").innerHTML = resultado;
+        }
+        function dividir() {
+            var x = parseFloat(document.getElementById("x").value);
+            var y = parseFloat(document.getElementById("y").value);
+            var resultado = x * y;
+            document.getElementById("result").innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>
