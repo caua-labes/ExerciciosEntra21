@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha Naval</title>
+</head>
+
+<body>
+    <button onclick="facil()">Facil</button>
+    <button onclick="medio()">Medio</button>
+    <button onclick="dificil()">Dificil</button>
+    <p id="contador"></p>
+    <div id="mapa">
+
+    </div>
+
+</body>
+<script>
+    var n1 = parseInt(Math.random() * (9 - 0) + 0)
+    var n2 = parseInt(Math.random() * (17 - 9) + 9)
+    var n3 = parseInt(Math.random() * (26 - 17) + 17)
+    var nivel = false
+    var contad = 0
+
+    function facil() {
+        if (nivel == false) {
+            for (let i = 0 + 1; i < 25; i++) {
+                document.getElementById("mapa").innerHTML += `<button onclick="get(${i})">~</button>`
+            }
+            nivel = true
+        }
+    }
+    function medio() {
+        if (nivel == false) {
+            for (let i = 0 + 1; i < 50; i++) {
+                document.getElementById("mapa").innerHTML += `<button onclick="get(${i})">~</button>`
+            }
+            nivel = true
+        }
+    }
+    function dificil() {
+        if (nivel == false) {
+            for (let i = 0 + 1; i < 75; i++) {
+                document.getElementById("mapa").innerHTML += `<button onclick="get(${i})">~</button>`
+            }
+            nivel = true
+        }
+    }
+    function get(item) {
+
+        contad += 1
+        if (item == n1) {
+            alert("acertou o 1")
+            return;
+        }
+        if (item == n2) {
+            alert("acertou o 2")
+            return;
+        }
+        if (item == n3) {
+            alert("acertou o 3")
+            return;
+        }
+        document.getElementById("contador").innerHTML = contad
+    }
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <style>
+        .li {
+            margin: 5px;
+        }
+
+        button {
+            width: 70px;
+            height: 20px;
+        }
+
+        .lista {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="valor" placeholder="Listar">
+    <button onclick="listar()">Listar</button>
+    <div class="lista" id="lista">
+
+    </div>
+</body>
+<script>
+    var lista = ""
+
+    function listar() {
+        var iten = document.getElementById("valor").value
+        lista += iten + `<button onclick="remover(this)">Remover</button>`
+
+        document.getElementById("lista").innerHTML = `<div class="li">
+            <p>${lista}</p>
+            </div>`
+    }
+    function remover(item) {
+        for (let i = 0; i < lista.length; i++) {
+            if (lista[i] == item) {
+                lista.slice(i, 0)
+                alert("oi")
+                return
+            }
+        }
+        console.log(item)
+        document.getElementById("lista").innerHTML = `<div class="li">
+            <p>${lista}</p>
+            </div>`
+    }
+</script>
+
+</html>

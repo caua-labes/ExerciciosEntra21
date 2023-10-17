@@ -31,7 +31,6 @@ function linha1() {
                 document.getElementById("result").innerHTML = "O jogador 1 ganhou"
             }
             else if (lin1 == 1 && lin5 == 1 && lin9 == 1) {
-                alert("O jogador 1 ganhou")
                 document.getElementById("result").innerHTML = "O jogador 1 ganhou"
             }
         }
@@ -51,7 +50,6 @@ function linha1() {
         }
         l1 = true
     }
-    console.log(lin1)
 }
 function linha2() {
     if (l2 == false) {
@@ -77,7 +75,6 @@ function linha2() {
                 document.getElementById("result").innerHTML = "O jogador 2 ganhou"
             }
         }
-        console.log(lin2)
         l2 = true
     }
 }
@@ -342,7 +339,7 @@ function trocar() {
     if (troca == false) {
         document.getElementById("p1").innerHTML = "Jogador 1 = O"
         document.getElementById("p2").innerHTML = "Jogador 2 = X"
-        vez = true
+        vez = false
         troca = true
     }
     else if (troca == true) {
