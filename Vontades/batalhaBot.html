@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batalha Naval</title>
+    <style>
+        .acert {
+            background-color: greenyellow;
+        }
+
+        .err {
+            background-color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +36,7 @@
     function facil() {
         if (nivel == false) {
             for (let i = 0 + 1; i < 25; i++) {
-                document.getElementById("mapa").innerHTML += `<button onclick="get(${i})">~</button>`
+                document.getElementById("mapa").innerHTML += `<p onclick="get(${i})">~</p>`
             }
             nivel = true
         }
@@ -35,7 +44,7 @@
     function medio() {
         if (nivel == false) {
             for (let i = 0 + 1; i < 50; i++) {
-                document.getElementById("mapa").innerHTML += `<button onclick="get(${i})">~</button>`
+                document.getElementById("mapa").innerHTML += `<p onclick="get(${i})">~</p>`
             }
             nivel = true
         }
@@ -43,26 +52,31 @@
     function dificil() {
         if (nivel == false) {
             for (let i = 0 + 1; i < 75; i++) {
-                document.getElementById("mapa").innerHTML += `<button onclick="get(${i})">~</button>`
+                document.getElementById("mapa").innerHTML += `<p onclick="get(${i})">~</p>`
             }
             nivel = true
         }
     }
     function get(item) {
-
-        contad += 1
+        
         if (item == n1) {
+            document.getElementsByTagName("p")[item].innerHTML = "O"
             alert("acertou o 1")
             return;
         }
         if (item == n2) {
+            document.getElementsByTagName("p")[item].innerHTML = "O"
             alert("acertou o 2")
             return;
         }
         if (item == n3) {
+            document.getElementsByTagName("p")[item].innerHTML = "O"
             alert("acertou o 3")
             return;
         }
+        contad += 1
+        console.log(item)
+        document.getElementsByTagName("p")[item].innerHTML = "X"
         document.getElementById("contador").innerHTML = contad
     }
 </script>
