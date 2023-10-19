@@ -13,29 +13,65 @@
         .err {
             background-color: red;
         }
+
+        .cant {
+            display: flex;
+            position: fixed;
+            margin: 10px;
+        }
+
+        #mapa {
+            display: inline-flex;
+            flex-wrap: wrap;
+            margin: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            border: solid rgb(0, 0, 255);
+            padding: 15px;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            margin: 0%;
+            cursor: pointer;
+            color: rgb(0, 84, 180);
+            font-family: monospace;
+            font-size: 20px;
+        }
+
+        #contador {
+            background-color: cornflowerblue;
+        }
     </style>
 </head>
 
 <body>
-    <button onclick="facil()">Facil</button>
-    <button onclick="medio()">Medio</button>
-    <button onclick="dificil()">Dificil</button>
-    <p id="contador"></p>
+    <div class="cant">
+        <button onclick="facil()">Facil</button>
+        <button onclick="medio()">Medio</button>
+        <button onclick="dificil()">Dificil</button>
+        <p id="contador"></p>
+    </div>
     <div id="mapa">
 
     </div>
 
 </body>
 <script>
-    var n1 = parseInt(Math.random() * (9 - 0) + 0)
-    var n2 = parseInt(Math.random() * (17 - 9) + 9)
-    var n3 = parseInt(Math.random() * (26 - 17) + 17)
+    var n1 = 0
+    var n2 = 0
+    var n3 = 0
     var nivel = false
     var contad = 0
 
     function facil() {
         if (nivel == false) {
-            for (let i = 0 + 1; i < 25; i++) {
+            n1 = parseInt(Math.random() * (9 - 0) + 0)
+            n2 = parseInt(Math.random() * (9 - 0) + 9)
+            n3 = parseInt(Math.random() * (9 - 0) + 17)
+            for (let i = 0 + 1 ; i <= 25; i++) {
                 document.getElementById("mapa").innerHTML += `<p onclick="get(${i})">~</p>`
             }
             nivel = true
@@ -58,7 +94,7 @@
         }
     }
     function get(item) {
-        
+
         if (item == n1) {
             document.getElementsByTagName("p")[item].innerHTML = "O"
             alert("acertou o 1")
@@ -76,8 +112,9 @@
         }
         contad += 1
         console.log(item)
-        document.getElementsByTagName("p")[item].innerHTML = "X"
         document.getElementById("contador").innerHTML = contad
+        document.getElementsByTagName("p")[item].innerHTML = "X"
+
     }
 </script>
 

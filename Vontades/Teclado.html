@@ -15,7 +15,7 @@
         }
 
         #carta {
-            display: flex;
+            
             flex-wrap: wrap;
             color: white;
             border-bottom: solid;
@@ -101,12 +101,32 @@
             font-size: 30px;
             margin-top: 60px;
         }
+
+        span {
+            animation: blink 1s steps(1, end) infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-dark">
 
-    <div id="carta"></div>
+    <div id="carta">
+
+    </div>
     <div class="conjunto">
         <div class="teclado">
             <button class="tecla" onclick="get('1')">1</button>
@@ -171,9 +191,11 @@
     </div>
 </body>
 <script>
+    var posiçoes = 0
     var letras = ''
     var CapsLock = false
     var simb = false
+    document.getElementById("carta").innerHTML = `<span>|</span>`
     function caps() {
         if (CapsLock == false) {
             CapsLock = true
@@ -187,54 +209,66 @@
     function get(item) {
         if (CapsLock == false) {
             letras += item.toLowerCase()
-            document.getElementById("carta").innerHTML = letras + "."
+            document.getElementById("carta").innerHTML = letras + `<span>|</span>`
         }
         else {
             letras += item
-            document.getElementById("carta").innerHTML = letras + "."
+            document.getElementById("carta").innerHTML = letras + `<span>|</span>`
         }
+        console.log(letras.length)
     }
     function remove() {
-        letras = letras.slice(0, -1)
-        document.getElementById("carta").innerHTML = letras + "."
+        var posiçoes = letras.length - 1
+        if (letras[posiçoes] == ">" && letras[posiçoes - 1] == "r" && letras[posiçoes - 2] == "b" && letras[posiçoes - 3] == "<") {
+            letras = letras.slice(0, -5)
+        }
+        else {
+            letras = letras.slice(0, -1)
+        }
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
     }
     function del() {
         letras = ""
-        document.getElementById("carta").innerHTML = letras + "."
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
     }
     function enter() {
         letras += `<br>`
-        document.getElementById("carta").innerHTML = letras + "."
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
     }
     function tab() {
         letras += "___"
-        document.getElementById("carta").innerHTML = letras + "."
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
     }
     function spaco() {
         letras += " "
-        document.getElementById("carta").innerHTML = letras + "."
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
     }
     function simbolos() {
         if (simb == false) {
             simb = true
             document.getElementById("simbolo").innerHTML = `
-        <button class="tecla" onclick="get('#')">#</button>
-        <button class="tecla" onclick="get('$')">$</button>
-        <button class="tecla" onclick="get('%')">%</button>
-        <button class="tecla" onclick="get('&')">&</button>
-        <button class="tecla" onclick="get('*')">*</button>
-        <button class="tecla" onclick="get('?')">?</button>
-        <button class="tecla" onclick="get('=')">=</button>
-        <button class="tecla" onclick="get('@')">@</button>
-        <button class="tecla" onclick="get('!')">!</button>
-        <button class="tecla" onclick="get('+')">+</button>
-        <button class="tecla" onclick="get('/')">/</button>
-        <button class="tecla" onclick="get('°')">°</button>
-        <button class="tecla" onclick="get('<')"><</button>
-        <button class="tecla" onclick="get('>')">></button>
-        <button class="tecla" onclick="get(';')">;</button>
-        <button class="tecla" onclick="get(':')">:</button>`
-
+                <button class="tecla" onclick="get('#')">#</button>
+                <button class="tecla" onclick="get('$')">$</button>
+                <button class="tecla" onclick="get('%')">%</button>
+                <button class="tecla" onclick="get('&')">&</button>
+                <button class="tecla" onclick="get('*')">*</button>
+                <button class="tecla" onclick="get('?')">?</button>
+                <button class="tecla" onclick="get('=')">=</button>
+                <button class="tecla" onclick="get('@')">@</button>
+                <button class="tecla" onclick="get('!')">!</button>
+                <button class="tecla" onclick="get('+')">+</button>
+                <button class="tecla" onclick="get('/')">/</button>
+                <button class="tecla" onclick="get('°')">°</button>
+                <button class="tecla" onclick="get('<')"><</button>
+                <button class="tecla" onclick="get('>')">></button>
+                <button class="tecla" onclick="get(';')">;</button>
+                <button class="tecla" onclick="get(':')">:</button>
+                <button class="tecla" onclick="get('(')">(</button>
+                <button class="tecla" onclick="get(')')">)</button>
+                <button class="tecla" onclick="get('[')">[</button>
+                <button class="tecla" onclick="get(']')">]</button>
+                <button class="tecla" onclick="get('{')">{</button>
+                <button class="tecla" onclick="get('}')">}</button>`
         }
         else if (simb == true) {
             simb = false
