@@ -1,10 +1,10 @@
 
-create table compromisso(
-ID_compromisso int primary key not null auto_increment,
-descricao varchar (100) not null,
-local varchar(75) not null,
-data date not null,
-hora time not null
+CREATE TABLE compromisso (
+    ID_compromisso INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    descricao VARCHAR(100) NOT NULL,
+    local VARCHAR(75) NOT NULL,
+    data DATE NOT NULL,
+    hora TIME NOT NULL
 );
 
 create table contato(
@@ -22,6 +22,8 @@ values(1,2);
 
 select * from compromisso where ID_compromisso = 2;
 select * from contato;
+
+/*ALERTA alguns codigos foram apagados*/
 
 create table compromissos(
 ID_contato int,
