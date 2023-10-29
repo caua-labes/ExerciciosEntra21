@@ -1,4 +1,4 @@
-
+create schema agenda;
 CREATE TABLE compromisso (
     ID_compromisso INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     descricao VARCHAR(100) NOT NULL,
