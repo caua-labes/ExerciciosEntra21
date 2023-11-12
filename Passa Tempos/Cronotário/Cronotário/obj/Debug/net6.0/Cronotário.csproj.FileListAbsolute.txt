@@ -1,0 +1,14 @@
+C:\Users\Dell\source\repos\Cronotário\Cronotário\bin\Debug\net6.0\Cronotário.exe
+C:\Users\Dell\source\repos\Cronotário\Cronotário\bin\Debug\net6.0\Cronotário.deps.json
+C:\Users\Dell\source\repos\Cronotário\Cronotário\bin\Debug\net6.0\Cronotário.runtimeconfig.json
+C:\Users\Dell\source\repos\Cronotário\Cronotário\bin\Debug\net6.0\Cronotário.dll
+C:\Users\Dell\source\repos\Cronotário\Cronotário\bin\Debug\net6.0\Cronotário.pdb
+C:\Users\Dell\source\repos\Cronotário\Cronotário\obj\Debug\net6.0\Cronotário.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\Cronotário\Cronotário\obj\Debug\net6.0\Cronotário.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\Cronotário\Cronotário\obj\Debug\net6.0\Cronotário.AssemblyInfo.cs
+C:\Users\Dell\source\repos\Cronotário\Cronotário\obj\Debug\net6.0\Cronotário.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Cronotário\Cronotário\obj\Debug\net6.0\Cronotário.dll
+C:\Users\Dell\source\repos\Cronotário\Cronotário\obj\Debug\net6.0\refint\Cronotário.dll
+C:\Users\Dell\source\repos\Cronotário\Cronotário\obj\Debug\net6.0\Cronotário.pdb
+C:\Users\Dell\source\repos\Cronotário\Cronotário\obj\Debug\net6.0\Cronotário.genruntimeconfig.cache
+C:\Users\Dell\source\repos\Cronotário\Cronotário\obj\Debug\net6.0\ref\Cronotário.dll
