@@ -1,0 +1,14 @@
+C:\Users\caua.labes\source\repos\SOLID\SOLID\bin\Debug\net6.0\SOLID.exe
+C:\Users\caua.labes\source\repos\SOLID\SOLID\bin\Debug\net6.0\SOLID.deps.json
+C:\Users\caua.labes\source\repos\SOLID\SOLID\bin\Debug\net6.0\SOLID.runtimeconfig.json
+C:\Users\caua.labes\source\repos\SOLID\SOLID\bin\Debug\net6.0\SOLID.dll
+C:\Users\caua.labes\source\repos\SOLID\SOLID\bin\Debug\net6.0\SOLID.pdb
+C:\Users\caua.labes\source\repos\SOLID\SOLID\obj\Debug\net6.0\SOLID.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\caua.labes\source\repos\SOLID\SOLID\obj\Debug\net6.0\SOLID.AssemblyInfoInputs.cache
+C:\Users\caua.labes\source\repos\SOLID\SOLID\obj\Debug\net6.0\SOLID.AssemblyInfo.cs
+C:\Users\caua.labes\source\repos\SOLID\SOLID\obj\Debug\net6.0\SOLID.csproj.CoreCompileInputs.cache
+C:\Users\caua.labes\source\repos\SOLID\SOLID\obj\Debug\net6.0\SOLID.dll
+C:\Users\caua.labes\source\repos\SOLID\SOLID\obj\Debug\net6.0\refint\SOLID.dll
+C:\Users\caua.labes\source\repos\SOLID\SOLID\obj\Debug\net6.0\SOLID.pdb
+C:\Users\caua.labes\source\repos\SOLID\SOLID\obj\Debug\net6.0\SOLID.genruntimeconfig.cache
+C:\Users\caua.labes\source\repos\SOLID\SOLID\obj\Debug\net6.0\ref\SOLID.dll
