@@ -31,7 +31,6 @@ namespace Arquivos
                     Console.WriteLine(listaComp.ToArray()[i + 1].ToString());
                     Console.WriteLine(listaComp.ToArray()[i + 2].ToString());
                     verF = false;
-
                 }
             }
             if (verF == true)

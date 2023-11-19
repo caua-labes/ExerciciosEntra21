@@ -1,4 +1,6 @@
-﻿namespace Arquivos
+﻿using System.IO;
+
+namespace Arquivos
 {
     class Program
     {
@@ -15,6 +17,14 @@
                 Limpar delet = new Limpar();
                 VerEspefiq ver = new VerEspefiq();
                 Alterar alterar = new Alterar();
+                Contato contato = new Contato();
+                if (!File.Exists(contato.path))
+                {
+                    using (StreamWriter sw = File.CreateText(contato.path))
+                    {
+                        sw.WriteLine("\n");
+                    }
+                }
                 switch (val)
                 {
                     case 1:
@@ -43,6 +53,10 @@
 
                     case 6:
                         alterar.alterar();
+                        break;
+
+
+                        default: Console.WriteLine("Numero inválido");
                         break;
 
                 }

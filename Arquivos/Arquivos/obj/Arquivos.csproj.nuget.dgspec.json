@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caua.labes\\source\\repos\\Arquivos\\Arquivos\\Arquivos.csproj": {}
+    "C:\\Users\\Dell\\Desktop\\AtividadesC#\\Arquivos\\Arquivos\\Arquivos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caua.labes\\source\\repos\\Arquivos\\Arquivos\\Arquivos.csproj": {
+    "C:\\Users\\Dell\\Desktop\\AtividadesC#\\Arquivos\\Arquivos\\Arquivos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caua.labes\\source\\repos\\Arquivos\\Arquivos\\Arquivos.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\AtividadesC#\\Arquivos\\Arquivos\\Arquivos.csproj",
         "projectName": "Arquivos",
-        "projectPath": "C:\\Users\\caua.labes\\source\\repos\\Arquivos\\Arquivos\\Arquivos.csproj",
-        "packagesPath": "C:\\Users\\caua.labes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caua.labes\\source\\repos\\Arquivos\\Arquivos\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\AtividadesC#\\Arquivos\\Arquivos\\Arquivos.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\AtividadesC#\\Arquivos\\Arquivos\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\caua.labes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

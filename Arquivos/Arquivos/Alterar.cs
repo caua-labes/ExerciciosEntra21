@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,11 +13,9 @@ namespace Arquivos
         public void alterar()
         {
             bool verF = true;
-            Contato neCont = new Contato();
             Console.Write("Qual contato deseja alterar: ");
             string nome = Console.ReadLine();
-            List<Contato> listaComp = new List<Contato>();
-            var lisT = "";
+            List<string> listaComp = new List<string>();
             using (StreamReader sr = File.OpenText(path))
             {
                 while ((lisT = sr.ReadLine()) != null)
@@ -26,18 +25,19 @@ namespace Arquivos
             }
             for (int i = 1; i < listaComp.Count; i += 4)
             {
-                if (listaComp[i].nome == nome)
+                if (listaComp[i] == nome)
                 {
+                    Contato dados = new Contato();
                     Console.Write("Nome: ");
-                    neCont.nome = Console.ReadLine();
+                    dados.nome = Console.ReadLine();
                     Console.Write("Numero: ");
-                    neCont.numero = Console.ReadLine();
+                    dados.numero = Console.ReadLine();
                     Console.Write("Idade: ");
-                    neCont.idade = int.Parse(Console.ReadLine());
+                    dados.idade = Console.ReadLine();
 
-                    listaComp[i] = neCont.nome;
-                    listaComp[i + 1] = neCont.numero;
-                    listaComp[i + 2] = neCont.idade;
+                    listaComp[i] = dados.nome;
+                    listaComp[i + 1] = dados.numero;
+                    listaComp[i + 2] = dados.idade;
                     verF = false;
 
                 }
@@ -48,11 +48,11 @@ namespace Arquivos
             }
             else
             {
-                for (int i = 0; i < listaComp.Count; i++)
+                using (StreamWriter sw = File.CreateText(path))
                 {
-                    using (StreamWriter sw = File.CreateText(path))
+                    for (int j = 0; j < listaComp.Count; j++)
                     {
-                        sw.WriteLine(listaComp.ToArray()[i].ToString());
+                        sw.WriteLine(listaComp.ToArray()[j].ToString());
                     }
                 }
             }

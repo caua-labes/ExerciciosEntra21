@@ -17,7 +17,7 @@ namespace Arquivos
                 Console.Write("Numero: ");
                 cont.numero = Console.ReadLine();
                 Console.Write("Idade: ");
-                cont.idade = int.Parse(Console.ReadLine());
+                cont.idade = Console.ReadLine();
                 List<string> listaComp = new List<string>();
                 var lisT = "";
                 using (StreamReader sr = File.OpenText(path))
