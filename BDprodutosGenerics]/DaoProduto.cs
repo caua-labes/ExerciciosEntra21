@@ -67,7 +67,7 @@ namespace BDprodutosGenerics_
                 cn.Connection = conta;
                 SqlDataReader dr;
                 dr = cn.ExecuteReader();
-                return cn.ExecuteNonQuery() > 0;
+                return true;
             }
         }
 

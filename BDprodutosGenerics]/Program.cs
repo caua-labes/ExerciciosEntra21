@@ -39,12 +39,14 @@ namespace BDprodutosGenerics
                         break;
 
                     case 4:
+                        daoCat.Consultar(categoria);
                         daoCat.Alterar(categoria);
                         Console.ReadKey();
                         Console.Clear();
                         break;
 
                     case 5:
+                        daoCat.Consultar(categoria);
                         daoCat.Excluir(categoria);
                         Console.ReadKey();
                         Console.Clear();
@@ -69,12 +71,14 @@ namespace BDprodutosGenerics
                         break;
 
                     case 9:
+                        daoProd.Consultar(produtos);
                         daoProd.Alterar(produtos);
                         Console.ReadKey();
                         Console.Clear();
                         break;
 
                     case 10:
+                        daoProd.Consultar(produtos);
                         daoProd.Excluir(produtos);
                         Console.ReadKey();
                         Console.Clear();
