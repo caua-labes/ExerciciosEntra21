@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BDprodutosGenerics_
+﻿namespace BDprodutosGenerics_
 {
     public class Conexão
     {
-        public static string chave = "Server=localhost;Database=Produtos;Uid=caua;Pwd=cabrazoera29";
+        //public static string chave = "Server=localhost;Database=Produtos;Uid=caua;Pwd=cabrazoera29";
+        public static string chave = "Server=localhost;Database=ListaProdutos;Uid=root;Pwd=cabrazoera29";
     }
 }

@@ -1,50 +1,88 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using BDprodutosGenerics_.Interfaces;
+using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crypto.Prng;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BDprodutosGenerics_.Interfaces;
-using System.Collections;
 
 namespace BDprodutosGenerics_
 {
     public class DaoProduto : Iprodutos<Produtos>
     {
+        MySqlConnection conexão = new(Conexão.chave);
+        Produtos produtos = new();
         public bool add(Produtos t)
         {
             Console.Write("Produto: ");
             t.Nome = Console.ReadLine();
+            {
+                conexão.Open();
+                MySqlCommand cmVer = conexão.CreateCommand();
+                cmVer.CommandText = @"select Produtos.NomeProduto, Produtos.id from Produtos";
+                MySqlDataReader rd = cmVer.ExecuteReader();
+                while (rd.Read())
+                {
+                    produtos = new();
+                    produtos.Id = Convert.ToInt32(rd["id"]);
+                    produtos.Nome = Convert.ToString(rd["NomeProduto"]);
+                    if(produtos.Nome == t.Nome)
+                    {
+                        Console.WriteLine($"Produto já adicionado no Id: {produtos.Id}");
+                        return true;
+                    }
+                }
+
+            }
             Console.Write("Valor: ");
             t.Valor = double.Parse(Console.ReadLine());
             Console.Write("Quantidade: ");
             t.Quantidade = int.Parse(Console.ReadLine());
             Console.Write("Categoria: ");
             t.Codigo = int.Parse(Console.ReadLine());
-
-            using (SqlConnection bd = new SqlConnection())
+            MySqlCommand cm = conexão.CreateCommand();
+            try
             {
-                bd.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Produtos;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
-
-                SqlCommand linCm = new SqlCommand();
-                linCm.CommandType = CommandType.Text;
-                linCm.CommandText = "insert into Produtos([Nome], [ValorUnitario], [Quantidade], [Categoria])values(@Nome, @ValorUnitario, @Quantidade, @Categoria)";
-                bd.Open();
-                linCm.Parameters.Add("Nome", SqlDbType.VarChar).Value = t.Nome;
-                linCm.Parameters.Add("ValorUnitario", SqlDbType.Decimal).Value = t.Valor;
-                linCm.Parameters.Add("Quantidade", SqlDbType.Int).Value = t.Quantidade;
-                linCm.Parameters.Add("Categoria", SqlDbType.Int).Value = t.Codigo;
-                linCm.Connection = bd;
-                return linCm.ExecuteNonQuery() > 0;
+                conexão.Open();
+                cm.CommandType = CommandType.Text;
+                cm.CommandText = @"insert into Produtos(NomeProduto,ValorUnitario,QuantidadeEst,Categoria)values(@Nome,@Valor,@Quantidade,@Codigo)";
+                cm.Parameters.Add("Nome", MySqlDbType.VarChar).Value = t.Nome;
+                cm.Parameters.Add("Valor", MySqlDbType.Decimal).Value = t.Valor;
+                cm.Parameters.Add("Quantidade", MySqlDbType.Int32).Value = t.Quantidade;
+                cm.Parameters.Add("Codigo", MySqlDbType.Int32).Value = t.Codigo;
+                return cm.ExecuteNonQuery() < 0;
 
             }
+            finally
+            {
+                if (conexão.State == ConnectionState.Open)
+                {
+                    conexão.Close();
+                }
+            }
+
         }
 
         public bool Alterar(Produtos t)
         {
+            bool resultado = false;
             Console.Write("Qual ID deseja alterar: ");
-            int id = int.Parse(Console.ReadLine());
+            int id = Convert.ToInt32(Console.ReadLine());
+            conexão.Open();
+            MySqlCommand cmVerId = conexão.CreateCommand();
+            cmVerId.CommandText = @"select Produtos.id from Produtos";
+            MySqlDataReader rdi = cmVerId.ExecuteReader();
+            while (rdi.Read())
+            {
+                produtos = new();
+                produtos.Id = Convert.ToInt32(rdi["id"]);
+                if (produtos.Id == id)
+                {
+                    resultado = true;
+                }
+            }
+            if (resultado != true)
+            {
+                Console.WriteLine("Id incorreto");
+                return true;
+            }
             Console.Write("Novo Produto: ");
             t.Nome = Console.ReadLine();
             Console.Write("Valor: ");
@@ -53,100 +91,103 @@ namespace BDprodutosGenerics_
             t.Quantidade = int.Parse(Console.ReadLine());
             Console.Write("Categoria: ");
             t.Codigo = int.Parse(Console.ReadLine());
-            using (SqlConnection conta = new SqlConnection())
+            MySqlCommand cm = conexão.CreateCommand();
+            try
             {
-                conta.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Produtos;Integrated Security=True;Connect Timeout=30;Encrypt=False";
-                SqlCommand cn = new();
-                cn.CommandType = CommandType.Text;
-                cn.CommandText = $"update Produtos set Nome = @Nome, ValorUnitario = @ValorUnitario, Quantidade = @Quantidade, Categoria = @Categoria where Id = {id}";
-                cn.Parameters.Add("@Nome", SqlDbType.VarChar).Value = t.Nome;
-                cn.Parameters.Add("@ValorUnitario", SqlDbType.Decimal).Value = t.Valor;
-                cn.Parameters.Add("@Quantidade", SqlDbType.Int).Value = t.Quantidade;
-                cn.Parameters.Add("@Categoria", SqlDbType.Int).Value = t.Codigo;
-                conta.Open();
-                cn.Connection = conta;
-                SqlDataReader dr;
-                dr = cn.ExecuteReader();
-                return true;
+                cm.CommandType = CommandType.Text;
+                cm.CommandText = $"update Produtos set NomeProduto = @Nome, ValorUnitario = @Valor, QuantidadeEst = @Quantidade, Categoria = @Codigo where Id = {id}";
+                cm.Parameters.Add("Nome", MySqlDbType.VarChar).Value = t.Nome;
+                cm.Parameters.Add("Valor", MySqlDbType.Decimal).Value = t.Valor;
+                cm.Parameters.Add("Quantidade", MySqlDbType.Int32).Value = t.Quantidade;
+                cm.Parameters.Add("Codigo", MySqlDbType.Int32).Value = t.Codigo;
+                return cm.ExecuteNonQuery() < 0;
+            }
+            finally
+            {
+                if (conexão.State == ConnectionState.Open)
+                {
+                    conexão.Close();
+                }
             }
         }
 
         public void Consultar(Produtos t)
         {
-            List<Produtos> lista = new List<Produtos>();
-            using (SqlConnection bd = new SqlConnection())
+            MySqlCommand cm = conexão.CreateCommand();
+            try
             {
-                bd.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Produtos;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
-                bd.Open();
-                SqlCommand linCm = new SqlCommand();
-                linCm.CommandType = CommandType.Text;
-                linCm.CommandText = "select Produtos.Id, Produtos.Nome, Produtos.ValorUnitario, Produtos.Quantidade, Categorias.categoriaNome, Categorias.Idcategoria from Produtos, Categorias where Produtos.Categoria = Categorias.Idcategoria";
-
-                linCm.Connection = bd;
-
-                SqlDataReader dr;
-                dr = linCm.ExecuteReader();
+                conexão.Open();
+                cm.CommandText = @"select * from Produtos,Categoria where Produtos.Categoria = Categoria.idcat";
+                MySqlDataReader dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
-                    Produtos produtos = new Produtos();
-                    produtos.Id = Convert.ToInt32(dr["Id"]);
-                    produtos.Nome = Convert.ToString(dr["Nome"]);
-                    produtos.Valor = Convert.ToDouble(dr["ValorUnitario"]);
-                    produtos.Quantidade = Convert.ToInt32(dr["Quantidade"]);
-                    produtos.categoria = new Categoria() { categoriaId = Convert.ToInt32(dr["Idcategoria"]), nomeCategoria = Convert.ToString(dr["categoriaNome"]) };
-                    lista.Add(produtos);
+                    t = new();
+                    t.Id = Convert.ToInt32(dr["id"]);
+                    t.Nome = Convert.ToString(dr["NomeProduto"]);
+                    t.Valor = Convert.ToDouble(dr["ValorUnitario"]);
+                    t.Quantidade = Convert.ToInt32(dr["QuantidadeEst"]);
+                    t.categoria = new Categoria() { categoriaId = Convert.ToInt32(dr["idcat"]), nomeCategoria = Convert.ToString(dr["nomecat"]) };
+                    Console.WriteLine(t.ToString());
                 }
-                foreach (Produtos item in lista)
+            }
+            finally
+            {
+                if (conexão.State == ConnectionState.Open)
                 {
-
-                    Console.WriteLine(item.ToString());
+                    conexão.Close();
                 }
             }
         }
-        
 
         public void ConsultarID(Produtos t)
         {
             Console.Write("Qual id deseja ver: ");
             int idCon = int.Parse(Console.ReadLine());
-            using (SqlConnection bd = new SqlConnection())
+
+            MySqlCommand cm = conexão.CreateCommand();
+            try
             {
-                bd.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Produtos;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
-                bd.Open();
-                SqlCommand linCm = new SqlCommand();
-                linCm.CommandType = CommandType.Text;
-                linCm.CommandText = $@"select Produtos.Id, Produtos.Nome, Produtos.ValorUnitario, Produtos.Quantidade, Categorias.categoriaNome, Categorias.Idcategoria from Produtos, Categorias where Id = {idCon} and Produtos.Categoria = Categorias.Idcategoria";
-                linCm.Connection = bd;
-                SqlDataReader dr;
-                dr = linCm.ExecuteReader();
+                conexão.Open();
+                cm.CommandText = $@"select * from Produtos,Categoria where id = {idCon} and Produtos.Categoria = Categoria.idcat";
+                MySqlDataReader dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
-                    Produtos produtos = new Produtos();
-                    produtos.Id = Convert.ToInt32(dr["Id"]);
-                    produtos.Nome = Convert.ToString(dr["Nome"]);
-                    produtos.Valor = Convert.ToDouble(dr["ValorUnitario"]);
-                    produtos.Quantidade = Convert.ToInt32(dr["Quantidade"]);
-                    produtos.categoria = new Categoria() { categoriaId = Convert.ToInt32(dr["Idcategoria"]), nomeCategoria = Convert.ToString(dr["categoriaNome"]) };
-                    Console.WriteLine(produtos.ToString());
+                    t = new();
+                    t.Id = Convert.ToInt32(dr["id"]);
+                    t.Nome = Convert.ToString(dr["NomeProduto"]);
+                    t.Valor = Convert.ToDouble(dr["ValorUnitario"]);
+                    t.Quantidade = Convert.ToInt32(dr["QuantidadeEst"]);
+                    t.categoria = new Categoria() { categoriaId = Convert.ToInt32(dr["idcat"]), nomeCategoria = Convert.ToString(dr["nomecat"]) };
+                    Console.WriteLine(t.ToString());
                 }
-
             }
+            finally
+            {
+                if (conexão.State == ConnectionState.Open)
+                {
+                    conexão.Close();
+                }
+            }
+
         }
 
         public void Excluir(Produtos t)
         {
             Console.Write("Qual id deseja Apagar: ");
             int idCon = int.Parse(Console.ReadLine());
-            using (SqlConnection bd = new SqlConnection())
+            MySqlCommand cm = conexão.CreateCommand();
+            try
             {
-                bd.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Produtos;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
-                bd.Open();
-                SqlCommand linCm = new SqlCommand();
-                linCm.CommandType = CommandType.Text;
-                linCm.CommandText = $@"Delete from Produtos where Id = {idCon}";
-                linCm.Connection = bd;
-                SqlDataReader rd;
-                rd = linCm.ExecuteReader();
+                conexão.Open();
+                cm.CommandText = $@"delete from Produtos where id = {idCon}";
+                cm.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (conexão.State == ConnectionState.Open)
+                {
+                    conexão.Close();
+                }
             }
         }
     }

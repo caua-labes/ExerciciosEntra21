@@ -1,6 +1,5 @@
 ﻿
 using BDprodutosGenerics_;
-using BDprodutosGenerics_.Interfaces;
 
 namespace BDprodutosGenerics
 {
@@ -18,7 +17,7 @@ namespace BDprodutosGenerics
                 DaoProduto daoProd = new DaoProduto();
                 Console.WriteLine("1 - Adicionar Categoria\n2 - Consultar Categoria por Id\n3 - Consultar Categorias\n4 - Alterar Categorias\n5 - Apagar Categoria\n6 - Adicionar Produtos\n7 - Consultar Produto por Id\n8 - Consultar Todos os Produtos\n9 - Alterar Produtos\n10 - Excluir Produto\n");
                 int val = int.Parse(Console.ReadLine());
-                
+
                 switch (val)
                 {
                     case 1:

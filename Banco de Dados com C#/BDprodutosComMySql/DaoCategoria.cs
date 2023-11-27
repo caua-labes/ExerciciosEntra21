@@ -1,7 +1,6 @@
-﻿using System.Data;
-using System.Data.SqlClient;
-using BDprodutosGenerics_.Interfaces;
+﻿using BDprodutosGenerics_.Interfaces;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace BDprodutosGenerics_
 {
@@ -10,16 +9,16 @@ namespace BDprodutosGenerics_
         MySqlConnection conexão = new(Conexão.chave);
         public bool add(Categoria t)
         {
-
+            
             Console.Write("Categoria: ");
             t.nomeCategoria = Console.ReadLine();
-            
+
             MySqlCommand cm = conexão.CreateCommand();
             try
             {
                 conexão.Open();
                 cm.CommandType = CommandType.Text;
-                cm.CommandText = @"insert into Categorias(nome)values(@nomeCategoria)";
+                cm.CommandText = @"insert into Categoria(nomecat)values(@nomeCategoria)";
                 cm.Parameters.Add("nomeCategoria", MySqlDbType.VarChar).Value = t.nomeCategoria;
                 cm.ExecuteNonQuery();
             }
@@ -41,7 +40,7 @@ namespace BDprodutosGenerics_
             {
                 conexão.Open();
                 cm.CommandType = CommandType.Text;
-                cm.CommandText = $@"update Categorias set nome = @nomeCategoria where id = {id}";
+                cm.CommandText = $@"update Categoria set nome = @nomeCategoria where id = {id}";
                 cm.Parameters.Add("nomeCategoria", MySqlDbType.VarChar).Value = t.nomeCategoria;
                 MySqlDataReader dr = cm.ExecuteReader();
                 return true;
@@ -54,20 +53,20 @@ namespace BDprodutosGenerics_
 
         public void Consultar(Categoria t)
         {
-            
+
             MySqlCommand cn = conexão.CreateCommand();
             try
             {
                 conexão.Open();
                 cn.CommandType = CommandType.Text;
-                cn.CommandText = @"select * from Categorias";
+                cn.CommandText = @"select * from Categoria";
                 MySqlDataReader dr = cn.ExecuteReader();
                 while (dr.Read())
                 {
-                    
+
                     Categoria categoria = new();
-                    categoria.categoriaId = Convert.ToInt32(dr["id"]);
-                    categoria.nomeCategoria = Convert.ToString(dr["nome"]);
+                    categoria.categoriaId = Convert.ToInt32(dr["idcat"]);
+                    categoria.nomeCategoria = Convert.ToString(dr["nomecat"]);
                     Console.WriteLine(categoria.ToString());
                 }
             }
@@ -80,17 +79,17 @@ namespace BDprodutosGenerics_
             }
         }
 
-        public void ConsultarID(Categoria t)
+        public bool ConsultarID(Categoria t)
         {
             Console.Write("Qual id deseja ver: ");
             int idPro = int.Parse(Console.ReadLine());
-            
+
             MySqlCommand cn = conexão.CreateCommand();
             try
             {
                 conexão.Open();
                 cn.CommandType = CommandType.Text;
-                cn.CommandText = $@"select * from Categorias where id = {idPro}";
+                cn.CommandText = $@"select * from Categoria where id = {idPro}";
                 MySqlDataReader dr = cn.ExecuteReader();
                 while (dr.Read())
                 {
@@ -108,19 +107,20 @@ namespace BDprodutosGenerics_
                     conexão.Close();
                 }
             }
+            return true;
         }
 
-        public void Excluir(Categoria t)
+        public bool Excluir(Categoria t)
         {
             Console.Write("Qual ID deseja apagar: ");
             int id = int.Parse(Console.ReadLine());
-            
+
             MySqlCommand cn = conexão.CreateCommand();
             try
             {
                 conexão.Open();
                 cn.CommandType = CommandType.Text;
-                cn.CommandText = $@"delete from Categorias where id = {id}";
+                cn.CommandText = $@"delete from Categoria where id = {id}";
                 MySqlDataReader dr = cn.ExecuteReader();
             }
             finally
@@ -130,6 +130,7 @@ namespace BDprodutosGenerics_
                     conexão.Close();
                 }
             }
+            return true;
         }
     }
 

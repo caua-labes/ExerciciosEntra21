@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caua.labes\\Desktop\\RepositorioGit\\Banco de Dados com C#\\BDprodutosComMySql\\BDprodutosGenerics].csproj": {}
+    "C:\\Users\\Dell\\Desktop\\Repositorio C#\\Banco de Dados com C#\\BDprodutosComMySql\\BDprodutosGenerics].csproj": {}
   },
   "projects": {
-    "C:\\Users\\caua.labes\\Desktop\\RepositorioGit\\Banco de Dados com C#\\BDprodutosComMySql\\BDprodutosGenerics].csproj": {
+    "C:\\Users\\Dell\\Desktop\\Repositorio C#\\Banco de Dados com C#\\BDprodutosComMySql\\BDprodutosGenerics].csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caua.labes\\Desktop\\RepositorioGit\\Banco de Dados com C#\\BDprodutosComMySql\\BDprodutosGenerics].csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Repositorio C#\\Banco de Dados com C#\\BDprodutosComMySql\\BDprodutosGenerics].csproj",
         "projectName": "BDprodutosGenerics]",
-        "projectPath": "C:\\Users\\caua.labes\\Desktop\\RepositorioGit\\Banco de Dados com C#\\BDprodutosComMySql\\BDprodutosGenerics].csproj",
-        "packagesPath": "C:\\Users\\caua.labes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caua.labes\\Desktop\\RepositorioGit\\Banco de Dados com C#\\BDprodutosComMySql\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\Repositorio C#\\Banco de Dados com C#\\BDprodutosComMySql\\BDprodutosGenerics].csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\Repositorio C#\\Banco de Dados com C#\\BDprodutosComMySql\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\caua.labes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

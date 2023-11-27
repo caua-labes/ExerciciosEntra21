@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BDprodutosGenerics_.Interfaces
+﻿namespace BDprodutosGenerics_.Interfaces
 {
     public interface Iprodutos<T>
     {
@@ -13,7 +7,5 @@ namespace BDprodutosGenerics_.Interfaces
         public bool Alterar(T t);
         public void Excluir(T t);
         public void ConsultarID(T t);
-
-        
     }
 }

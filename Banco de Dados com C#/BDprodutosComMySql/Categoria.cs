@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BDprodutosGenerics_
+﻿namespace BDprodutosGenerics_
 {
     public class Categoria
     {
@@ -13,7 +7,7 @@ namespace BDprodutosGenerics_
 
         public string ToString()
         {
-            return $"{categoriaId} {nomeCategoria}";
+            return $"{categoriaId} {nomeCategoria.Trim()}";
         }
     }
 }
