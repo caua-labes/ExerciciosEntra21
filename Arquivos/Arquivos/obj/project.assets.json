@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Dell\\.nuget\\packages\\": {},
+    "C:\\Users\\caua.labes\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\Desktop\\AtividadesC#\\Arquivos\\Arquivos\\Arquivos.csproj",
+      "projectUniqueName": "C:\\Users\\caua.labes\\Desktop\\RepositorioGit\\Arquivos\\Arquivos\\Arquivos.csproj",
       "projectName": "Arquivos",
-      "projectPath": "C:\\Users\\Dell\\Desktop\\AtividadesC#\\Arquivos\\Arquivos\\Arquivos.csproj",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\Desktop\\AtividadesC#\\Arquivos\\Arquivos\\obj\\",
+      "projectPath": "C:\\Users\\caua.labes\\Desktop\\RepositorioGit\\Arquivos\\Arquivos\\Arquivos.csproj",
+      "packagesPath": "C:\\Users\\caua.labes\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\caua.labes\\Desktop\\RepositorioGit\\Arquivos\\Arquivos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\caua.labes\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

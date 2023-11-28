@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Arquivos",
-    "\\Arquivos\\Arquivos"
+    "\\Banco de Dados com C#",
+    "\\Banco de Dados com C#\\BDprodutosComMySql",
+    "\\Banco de Dados com C#\\BDprodutosComMySql\\Interfaces"
   ],
-  "SelectedNode": "\\Arquivos\\Arquivos\\Alterar.cs",
+  "SelectedNode": "\\Banco de Dados com C#\\BDprodutosComMySql\\DaoProduto.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -79,7 +79,7 @@ namespace BDprodutosGenerics_
             }
         }
 
-        public bool ConsultarID(Categoria t)
+        public void ConsultarID(Categoria t)
         {
             Console.Write("Qual id deseja ver: ");
             int idPro = int.Parse(Console.ReadLine());
@@ -107,10 +107,10 @@ namespace BDprodutosGenerics_
                     conexão.Close();
                 }
             }
-            return true;
+            
         }
 
-        public bool Excluir(Categoria t)
+        public void Excluir(Categoria t)
         {
             Console.Write("Qual ID deseja apagar: ");
             int id = int.Parse(Console.ReadLine());
@@ -130,7 +130,7 @@ namespace BDprodutosGenerics_
                     conexão.Close();
                 }
             }
-            return true;
+            
         }
     }
 
