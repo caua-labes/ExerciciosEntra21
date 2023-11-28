@@ -1,0 +1,12 @@
+﻿@model MVC.Models.Pessoa
+@{
+    ViewData["Title"] = "Teste";
+    ViewData["txt"] = "Contato Unico";
+}
+
+<div class="text-center">
+    <h1> @ViewData["txt"]</h1>
+    <b>@Html.DisplayNameFor(Model => Model.Id)</b>    <span style="color:red;">@Html.DisplayFor(Model => Model.Id)</span>
+        <b>@Html.DisplayNameFor(Model => Model.Nome)</b>  <span style="color:red;">@Html.DisplayFor(Model => Model.Nome)</span>
+    <b>@Html.DisplayNameFor(Model => Model.Email)</b> <span style="color:red;">@Html.DisplayFor(Model => Model.Email)</span>
+</div>
