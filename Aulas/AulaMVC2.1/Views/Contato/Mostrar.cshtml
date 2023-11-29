@@ -1,0 +1,17 @@
+﻿@model AulaMVC2._1.Models.Contato
+@{
+	ViewData["title"] = "Consultar";
+}
+<h2>@ViewData["title"]</h2>
+
+<b>Id: </b><span>@Html.DisplayFor(Model => Model.Id)</span>
+<br/>
+<b>Nome: </b><span>@Html.DisplayFor(Model => Model.Nome)</span>
+<br/>
+<b>Email: </b><span>@Html.DisplayFor(Model => Model.Email)</span>
+<br/>
+<b>Fone: </b><span>@Html.DisplayFor(Model => Model.Fone)</span>
+<br/>
+<form>
+	<a asp-action="Index">Voltar</a>
+</form>
