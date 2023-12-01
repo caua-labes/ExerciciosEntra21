@@ -1,0 +1,25 @@
+﻿@model AulaMVC2._1.Models.Local
+@{
+	ViewData["title"] = "Detalhes";
+}
+<h2>@ViewData["title"]</h2>
+
+<span>@Html.DisplayNameFor(Model => Model.Id):		 </span><span>@Html.DisplayFor(Model => Model.Id)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.NomeLocal):</span><span>@Html.DisplayFor(Model => Model.NomeLocal)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.Rua):		 </span><span>@Html.DisplayFor(Model => Model.Rua)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.Numero):	 </span><span>@Html.DisplayFor(Model => Model.Numero)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.Bairro):	 </span><span>@Html.DisplayFor(Model => Model.Bairro)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.Cidade):	 </span><span>@Html.DisplayFor(Model => Model.Cidade)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.CEP):		 </span><span>@Html.DisplayFor(Model => Model.CEP)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.Uf):		 </span><span>@Html.DisplayFor(Model => Model.Uf)</span>
+
+<form>
+	<a asp-action="Index">Voltar</a>
+</form>
