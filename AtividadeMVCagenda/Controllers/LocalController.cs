@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AulaMVC2._1.Controllers
 {
-	public class LocaisController : Controller
+	public class LocalController : Controller
 	{
 		public IActionResult Index()
 		{

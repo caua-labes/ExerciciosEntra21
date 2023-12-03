@@ -23,14 +23,14 @@
 		@foreach (var item in Model)
 		{
 			<tr>
-				<th>@Html.DisplayFor(Model => item.Id)</th>
-				<th>@Html.DisplayFor(Model => item.NomeLocal)</th>
-				<th>@Html.DisplayFor(Model => item.Rua)</th>
-				<th>@Html.DisplayFor(Model => item.Numero)</th>
-				<th>@Html.DisplayFor(Model => item.Bairro)</th>
-				<th>@Html.DisplayFor(Model => item.Cidade)</th>
-				<th>@Html.DisplayFor(Model => item.CEP)</th>
-				<th>@Html.DisplayFor(Model => item.Uf)</th>
+				<td>@Html.DisplayFor(Model => item.Id)</td>
+				<td>@Html.DisplayFor(Model => item.NomeLocal)</td>
+				<td>@Html.DisplayFor(Model => item.Rua)</td>
+				<td>@Html.DisplayFor(Model => item.Numero)</td>
+				<td>@Html.DisplayFor(Model => item.Bairro)</td>
+				<td>@Html.DisplayFor(Model => item.Cidade)</td>
+				<td>@Html.DisplayFor(Model => item.CEP)</td>
+				<td>@Html.DisplayFor(Model => item.Uf)</td>
 				<td>
 					@Html.ActionLink("Editar", "Editar", new{Id = item.Id});
 					@Html.ActionLink("Deletar", "Deletar", new{Id = item.Id});

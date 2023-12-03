@@ -1,0 +1,21 @@
+﻿@model AulaMVC2._1.Models.Compromissos
+@{
+    ViewData["title"] = "Detalhes";
+}
+<h2>@ViewData["title"]</h2>
+
+<span>@Html.DisplayNameFor(Model => Model.Descricão):</span>
+<span>@Html.DisplayFor(Model => Model.Descricão)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.Data):</span>
+<span>@Html.DisplayFor(Model => Model.Data)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.Contato):</span>
+<span>@Html.DisplayFor(Model => Model.Contato.Nome)</span>
+<br />
+<span>@Html.DisplayNameFor(Model => Model.Local):</span>
+<span>@Html.DisplayFor(Model => Model.Local.NomeLocal)</span>
+
+<form>
+    <a asp-action="Index">Voltar</a>
+</form>

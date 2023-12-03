@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Controllers",
+    "\\Models",
     "\\Views",
-    "\\Views\\Contato"
+    "\\Views\\Contato",
+    "\\Views\\Home"
   ],
-  "SelectedNode": "\\Views\\Contato\\Deletar.cshtml",
+  "SelectedNode": "\\Controllers\\CompromissosController.cs",
   "PreviewInSolutionExplorer": false
 }
