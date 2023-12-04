@@ -7,4 +7,8 @@
     <RootNamespace>AulaMVC2._1</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.2.0" />
+  </ItemGroup>
+
 </Project>

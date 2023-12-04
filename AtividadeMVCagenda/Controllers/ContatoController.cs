@@ -1,12 +1,15 @@
-﻿using AulaMVC2._1.Models;
+﻿using System.Collections.Generic;
+using AulaMVC2._1.Dados;
+using AulaMVC2._1.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AulaMVC2._1.Controllers
 {
     public class ContatoController : Controller
     {
-		public IActionResult Index()
+		public IActionResult Index(Contato contato)
         {
+            Dados.Listas.listaContato = new ModosDao.CrudContato().consultar(contato);
             return View(Dados.Listas.listaContato);
         }
         [HttpGet]
@@ -17,8 +20,7 @@ namespace AulaMVC2._1.Controllers
         [HttpPost]
         public IActionResult Criar(AulaMVC2._1.Models.Contato contato)
         {
-            contato.Id = Dados.Listas.listaContato.Count + 1;
-			Dados.Listas.listaContato.Add(contato);
+            new ModosDao.CrudContato().salvar(contato);
             return RedirectToAction("Index");
         }
 
@@ -33,9 +35,7 @@ namespace AulaMVC2._1.Controllers
         public IActionResult Editar(Models.Contato contato)
         {
             Models.Contato conta = Dados.Listas.listaContato.FirstOrDefault(ct => ct.Id == contato.Id);
-            conta.Nome = contato.Nome;
-            conta.Email = contato.Email;
-            conta.Fone = contato.Fone;
+            new ModosDao.CrudContato().editar(conta);
             return RedirectToAction("Index");
         }
         [HttpGet]
@@ -48,7 +48,7 @@ namespace AulaMVC2._1.Controllers
         public IActionResult Deletar(Models.Contato cont)
         {
             Models.Contato contato = Dados.Listas.listaContato.FirstOrDefault(i => i.Id == cont.Id);
-			Dados.Listas.listaContato.Remove(contato);
+			new ModosDao.CrudContato().excluir(contato);
             return RedirectToAction("Index");
         }
 		public IActionResult Mostrar(int? id)

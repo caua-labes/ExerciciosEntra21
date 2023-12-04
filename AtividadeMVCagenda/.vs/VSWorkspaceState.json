@@ -5,8 +5,9 @@
     "\\Models",
     "\\Views",
     "\\Views\\Contato",
-    "\\Views\\Home"
+    "\\Views\\Home",
+    "\\Views\\Local"
   ],
-  "SelectedNode": "\\Controllers\\CompromissosController.cs",
+  "SelectedNode": "\\Views\\Local\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -19,7 +19,12 @@
 				<label asp-for="Fone" class="control-label"></label>
 				<input asp-for="Fone" class="form-control"/>
 			</div>
-			<button asp-action="Criar">Criar</button>
+			<input type="submit" value="Criar"/>
 		</form>
 	</div>
 </div>
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

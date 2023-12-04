@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AtividadeMVCagenda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbb41a284052cc60b92c0c58f0cbf3c103067c30")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AtividadeMVCagenda")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AtividadeMVCagenda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
