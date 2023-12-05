@@ -10,5 +10,6 @@
         public string Cidade { get; set; }
 		public string CEP { get; set; }
         public string Uf { get; set; }
+        public byte status { get; set; }
     }
 }

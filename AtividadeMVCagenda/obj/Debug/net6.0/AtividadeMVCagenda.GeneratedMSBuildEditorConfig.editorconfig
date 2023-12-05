@@ -9,93 +9,95 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AulaMVC2._1
 build_property.RootNamespace = AulaMVC2._1
-build_property.ProjectDir = C:\Users\caua.labes\Desktop\RepositorioGit\AtividadeMVCagenda\
+build_property.ProjectDir = C:\Users\Dell\Desktop\Repositorio C#\AtividadeMVCagenda\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\caua.labes\Desktop\RepositorioGit\AtividadeMVCagenda
+build_property.MSBuildProjectDirectory = C:\Users\Dell\Desktop\Repositorio C#\AtividadeMVCagenda
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Compromissos/Criar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Compromissos/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJvbWlzc29zXENyaWFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Compromissos/Deletar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Compromissos/Deletar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJvbWlzc29zXERlbGV0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Compromissos/Editar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Compromissos/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJvbWlzc29zXEVkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Compromissos/Index.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Compromissos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJvbWlzc29zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Compromissos/Mostrar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Compromissos/Mostrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJvbWlzc29zXE1vc3RyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Contato/Criar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Contato/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xDcmlhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Contato/Deletar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Contato/Deletar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xEZWxldGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Contato/Editar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Contato/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Contato/Index.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Contato/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Contato/Mostrar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Contato/Mostrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xNb3N0cmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Home/Index.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Local/Criar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Local/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxcQ3JpYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Local/Deletar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Local/Deletar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxcRGVsZXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Local/Editar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Local/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxcRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Local/Index.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Local/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Local/Mostrar.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Local/Mostrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxcTW9zdHJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Shared/Error.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/_ViewImports.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/_ViewStart.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caua.labes/Desktop/RepositorioGit/AtividadeMVCagenda/Views/Shared/_Layout.cshtml]
+[C:/Users/Dell/Desktop/Repositorio C\#/AtividadeMVCagenda/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-27rv0qsdnv

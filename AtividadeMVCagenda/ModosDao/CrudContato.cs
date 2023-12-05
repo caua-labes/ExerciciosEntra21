@@ -9,54 +9,77 @@ namespace AulaMVC2._1.ModosDao
         Models.ChaveSQL bdkey = new();
         public Contato consultar(int id)
         {
-            throw new NotImplementedException();
+            Contato cont = new();
+            MySqlConnection con = new(Models.ChaveSQL.Key());
+            MySqlCommand cmd = con.CreateCommand();
+            try
+            {
+                con.Open();
+                cmd.CommandText = $@"select * from contatos where id = {id}";
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cont.Id = Convert.ToInt32(dr["id"]);
+                    cont.Nome = Convert.ToString(dr["nomecontato"]);
+                    cont.Email = Convert.ToString(dr["email"]);
+                    cont.Fone = Convert.ToString(dr["fone"]);
+                    cont.status = Convert.ToByte(dr["status"]);
+                }
+                return cont;
+            }
+            finally
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
         }
 
         public bool editar(Contato t)
         {
-			MySqlConnection con = new MySqlConnection(Models.ChaveSQL.Key());
-			MySqlCommand cmd = con.CreateCommand();
-			t.status = 0;
-			try
-			{
-				con.Open();
-				cmd.CommandText = $@"update contatos set nomecontato = @Nome, email = @Email, fone = @Fone where id = {t.Id}";
+            MySqlConnection con = new MySqlConnection(Models.ChaveSQL.Key());
+            MySqlCommand cmd = con.CreateCommand();
+            try
+            {
+                con.Open();
+                cmd.CommandText = $@"update contatos set nomecontato = @Nome, email = @Email, fone = @Fone where id = {t.Id}";
                 cmd.Parameters.Add("Nome", MySqlDbType.VarChar).Value = t.Nome;
                 cmd.Parameters.Add("Email", MySqlDbType.VarChar).Value = t.Email;
                 cmd.Parameters.Add("Fone", MySqlDbType.VarChar).Value = t.Fone;
                 cmd.ExecuteNonQuery();
-			}
-			finally
-			{
-				if (con.State == System.Data.ConnectionState.Open)
-				{
-					con.Close();
-				}
-			}
+            }
+            finally
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
             return true;
-		}
+        }
 
-		public void excluir(Contato t)
+        public void excluir(Contato t)
         {
-			MySqlConnection con = new MySqlConnection(Models.ChaveSQL.Key());
-			MySqlCommand cmd = con.CreateCommand();
+            MySqlConnection con = new MySqlConnection(Models.ChaveSQL.Key());
+            MySqlCommand cmd = con.CreateCommand();
             t.status = 0;
-			try
-			{
-				con.Open();
+            try
+            {
+                con.Open();
                 cmd.CommandText = $@"update contatos set contatos.status = @status where id = {t.Id}";
                 cmd.Parameters.Add("status", MySqlDbType.Bit).Value = t.status;
                 cmd.ExecuteNonQuery();
-			}
-			finally
-			{
-				if (con.State == System.Data.ConnectionState.Open)
-				{
-					con.Close();
-				}
-			}
-		}
-	
+            }
+            finally
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
 
         public bool salvar(Contato t)
         {
@@ -69,8 +92,8 @@ namespace AulaMVC2._1.ModosDao
                 cmd.Parameters.Add("Nome", MySqlDbType.VarChar).Value = t.Nome;
                 cmd.Parameters.Add("Email", MySqlDbType.VarChar).Value = t.Email;
                 cmd.Parameters.Add("Fone", MySqlDbType.VarChar).Value = t.Fone;
-				cmd.Parameters.Add("status",MySqlDbType.Bit).Value = true;
-				cmd.ExecuteNonQuery();
+                cmd.Parameters.Add("status", MySqlDbType.Bit).Value = true;
+                cmd.ExecuteNonQuery();
             }
             finally
             {
@@ -100,7 +123,7 @@ namespace AulaMVC2._1.ModosDao
                     cont.Email = Convert.ToString(dr["email"]);
                     cont.Fone = Convert.ToString(dr["fone"]);
                     cont.status = Convert.ToByte(dr["status"]);
-                   lista.Add(cont);
+                    lista.Add(cont);
                 }
                 return lista;
             }

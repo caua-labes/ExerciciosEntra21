@@ -3,11 +3,12 @@
     "",
     "\\Controllers",
     "\\Models",
+    "\\ModosDao",
     "\\Views",
     "\\Views\\Contato",
     "\\Views\\Home",
     "\\Views\\Local"
   ],
-  "SelectedNode": "\\Views\\Local\\Index.cshtml",
+  "SelectedNode": "\\ModosDao\\CrudContato.cs",
   "PreviewInSolutionExplorer": false
 }
