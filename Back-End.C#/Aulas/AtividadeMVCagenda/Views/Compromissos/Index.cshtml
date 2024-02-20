@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AulaMVC2._1.Models.Compromissos>
+@{
+	ViewData["title"] = "Compromissos";
+}
+<h2>@ViewData["title"]</h2>
+<a asp-action="Criar">Criar</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>@Html.DisplayNameFor(Model => Model.Id)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Descricão)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Data)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Contato)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Local)</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model){
+		<tr>
+			<td>@Html.DisplayFor(Model => item.Id)</td>
+			<td>@Html.DisplayFor(Model => item.Descricão)</td>
+			<td>@Html.DisplayFor(Model => item.Data)</td>
+			<td>@Html.DisplayFor(Model => item.Contato.Nome)</td>
+			<td>@Html.DisplayFor(Model => item.Local.NomeLocal)</td>
+				<td>
+					@Html.ActionLink("Editar", "Editar", new{Id = item.Id});
+					@Html.ActionLink("Deletar", "Deletar", new{Id = item.Id});
+					@Html.ActionLink("Mostrar", "Mostrar", new{Id = item.Id});
+				</td>
+		</tr>
+		}
+	</tbody>
+</table>

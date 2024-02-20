@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Models",
+    "\\ModosDao",
+    "\\Views",
+    "\\Views\\Contato",
+    "\\Views\\Home",
+    "\\Views\\Local"
+  ],
+  "SelectedNode": "\\ModosDao\\CrudContato.cs",
+  "PreviewInSolutionExplorer": false
+}

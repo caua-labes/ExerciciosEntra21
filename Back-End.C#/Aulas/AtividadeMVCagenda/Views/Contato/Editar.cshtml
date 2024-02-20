@@ -1,0 +1,30 @@
+﻿@model AulaMVC2._1.Models.Contato
+@{
+	ViewData["title"] = "Editar";
+}
+<h2>@ViewData["title"]</h2>
+
+<div class="row">
+	<div>
+		<form asp-action="Editar">
+			<div class="form-group">
+				<label asp-for="Nome" class="control-label"></label>
+				<input asp-for="Nome" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label asp-for="Email" class="control-label"></label>
+				<input asp-for="Email" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label asp-for="Fone" class="control-label"></label>
+				<input asp-for="Fone" class="form-control" />
+			</div>
+			<button asp-action="Editar">Editar</button>
+		</form>
+	</div>
+</div>
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<AulaMVC2._1.Models.Contato>
+@{
+	ViewData["title"] = "Contatos";
+}
+<h2 class="text-center">@ViewData["title"]</h2>
+<p>
+	<a asp-action="Criar">Criar</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>@Html.DisplayNameFor(Model => Model.Id)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Nome)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Email)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Fone)</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@Html.DisplayFor(Model => item.Id)</td>
+				<td>@Html.DisplayFor(Model => item.Nome)</td>
+				<td>@Html.DisplayFor(Model => item.Email)</td>
+				<td>@Html.DisplayFor(Model => item.Fone)</td>
+				<td>
+					@Html.ActionLink("Editar", "Editar", new{Id = item.Id});
+					@Html.ActionLink("Deletar", "Deletar", new{Id = item.Id});
+					@Html.ActionLink("Mostrar", "Mostrar", new{Id = item.Id});
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

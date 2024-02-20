@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AulaMVC2._1.Models.Local>
+@{
+	ViewData["title"] = "Locais";
+}
+<h2 class="text-center">@ViewData["title"]</h2>
+<p>
+	<a asp-action="Criar">Criar</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>@Html.DisplayNameFor(Model => Model.Id)</th>
+			<th>@Html.DisplayNameFor(Model => Model.NomeLocal)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Rua)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Numero)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Bairro)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Cidade)</th>
+			<th>@Html.DisplayNameFor(Model => Model.CEP)</th>
+			<th>@Html.DisplayNameFor(Model => Model.Uf)</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@Html.DisplayFor(Model => item.Id)</td>
+				<td>@Html.DisplayFor(Model => item.NomeLocal)</td>
+				<td>@Html.DisplayFor(Model => item.Rua)</td>
+				<td>@Html.DisplayFor(Model => item.Numero)</td>
+				<td>@Html.DisplayFor(Model => item.Bairro)</td>
+				<td>@Html.DisplayFor(Model => item.Cidade)</td>
+				<td>@Html.DisplayFor(Model => item.CEP)</td>
+				<td>@Html.DisplayFor(Model => item.Uf)</td>
+				<td>
+					@Html.ActionLink("Editar", "Editar", new{Id = item.Id});
+					@Html.ActionLink("Deletar", "Deletar", new{Id = item.Id});
+					@Html.ActionLink("Mostrar", "Mostrar", new{Id = item.Id});
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
