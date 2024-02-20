@@ -1,0 +1,14 @@
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\bin\Debug\net8.0\AulaTestes.NET.exe
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\bin\Debug\net8.0\AulaTestes.NET.deps.json
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\bin\Debug\net8.0\AulaTestes.NET.runtimeconfig.json
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\bin\Debug\net8.0\AulaTestes.NET.dll
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\bin\Debug\net8.0\AulaTestes.NET.pdb
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\obj\Debug\net8.0\AulaTestes.NET.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\obj\Debug\net8.0\AulaTestes.NET.AssemblyInfoInputs.cache
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\obj\Debug\net8.0\AulaTestes.NET.AssemblyInfo.cs
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\obj\Debug\net8.0\AulaTestes.NET.csproj.CoreCompileInputs.cache
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\obj\Debug\net8.0\AulaTestes.NET.dll
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\obj\Debug\net8.0\refint\AulaTestes.NET.dll
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\obj\Debug\net8.0\AulaTestes.NET.pdb
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\obj\Debug\net8.0\AulaTestes.NET.genruntimeconfig.cache
+C:\Users\caua.labes\source\repos\AulaTestes.NET\AulaTestes.NET\obj\Debug\net8.0\ref\AulaTestes.NET.dll
