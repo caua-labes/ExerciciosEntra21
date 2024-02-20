@@ -1,0 +1,14 @@
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\bin\Debug\net6.0\Atividade3comSortedEList.exe
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\bin\Debug\net6.0\Atividade3comSortedEList.deps.json
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\bin\Debug\net6.0\Atividade3comSortedEList.runtimeconfig.json
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\bin\Debug\net6.0\Atividade3comSortedEList.dll
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\bin\Debug\net6.0\Atividade3comSortedEList.pdb
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\obj\Debug\net6.0\Atividade3comSortedEList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\obj\Debug\net6.0\Atividade3comSortedEList.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\obj\Debug\net6.0\Atividade3comSortedEList.AssemblyInfo.cs
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\obj\Debug\net6.0\Atividade3comSortedEList.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\obj\Debug\net6.0\Atividade3comSortedEList.dll
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\obj\Debug\net6.0\refint\Atividade3comSortedEList.dll
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\obj\Debug\net6.0\Atividade3comSortedEList.pdb
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\obj\Debug\net6.0\Atividade3comSortedEList.genruntimeconfig.cache
+C:\Users\Dell\source\repos\Atividade3comSortedEList\Atividade3comSortedEList\obj\Debug\net6.0\ref\Atividade3comSortedEList.dll
