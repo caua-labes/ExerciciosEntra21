@@ -1,0 +1,36 @@
+body {
+    background-color: rgba(35, 35, 35, 0.927);
+    color: white;
+}
+
+.numeros {
+    color: white;
+    background-color: royalblue;
+    border-color: white;
+
+}
+.operadores {
+    color: white;
+    background-color: orangered;
+    border-color: white;
+
+}
+.center {
+    margin-top: 150px;
+    display: grid;
+    place-items: center;
+}
+
+.text {
+    display: inline;
+    text-align: left;
+    justify-content: space-between;
+}
+.limpar{
+    background-color: greenyellow;
+    border-color: white;
+}
+button{
+    width: 50px;
+    height: 55px;
+}
