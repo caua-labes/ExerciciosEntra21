@@ -1,0 +1,34 @@
+﻿@model MVC.Models.Pessoa
+@{
+    ViewData["Title"] = "Teste";
+}
+
+<div class="text-center">
+    <table style="border:double 2px black;" class="table">
+        <tr style="background-color: black">
+            <th>
+                @Html.DisplayNameFor(Model => Model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Email)
+            </th>
+        </tr>
+            <tr style="background-color:wheat;">
+                <th>
+                    @Html.DisplayFor(Model => Model.Id)
+                </th>
+                <th>
+                    @Html.DisplayFor(Model => Model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayFor(Model => Model.Email)
+                </th>
+            </tr>
+        
+
+    </table>
+</div>
+

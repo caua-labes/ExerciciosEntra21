@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MVC.Models.Pessoa>
+@{
+    ViewData["Title"] = "Teste";
+}
+
+<div class="text-center">
+    <table style="border:double 2px black;color:white;" class="table">
+        <tr style="background-color: black">
+            <th>
+                @Html.DisplayNameFor(Model => Model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Email)
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr style="background-color:wheat; color:red;">
+                <td>
+                    @Html.DisplayFor(Model => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(Model => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(Model => item.Email)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
