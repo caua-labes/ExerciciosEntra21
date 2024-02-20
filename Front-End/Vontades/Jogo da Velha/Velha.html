@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./grade.css">
+    <script src="./script.js"></script>
+</head>
+
+<body class="bg-dark">
+    <h2 id="p1">Jogador 1 = X</h2>
+    <h2 id="p2">Jogador 2 = O</h2>
+    <button onclick="trocar()">Trocar</button>
+    <div class="grade">
+        <div class="linha">
+            <p id="1" onclick="linha1()"> </p>
+            <p class="dois" id="2" onclick="linha2()"> </p>
+            <p id="3" onclick="linha3()"> </p>
+        </div>
+        <div class="linha">
+            <p class="quatro" id="4" onclick="linha4()"> </p>
+            <p id="5" onclick="linha5()"> </p>
+            <p class="seis" id="6" onclick="linha6()"> </p>
+        </div>
+        <div class="linha">
+            <p id="7" onclick="linha7()"> </p>
+            <p class="oito" id="8" onclick="linha8()"> </p>
+            <p id="9" onclick="linha9()"> </p>
+        </div>
+    </div>
+    <div class="re">
+        <h1 id="result"></h1>
+        <button onclick="Denovo()">Jogar de novo</button>
+    </div>
+</body>
+
+</html>
