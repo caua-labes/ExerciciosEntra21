@@ -1,0 +1,14 @@
+C:\Users\caua.labes\source\repos\Aula de LINQ\bin\Debug\net6.0\Aula de LINQ.exe
+C:\Users\caua.labes\source\repos\Aula de LINQ\bin\Debug\net6.0\Aula de LINQ.deps.json
+C:\Users\caua.labes\source\repos\Aula de LINQ\bin\Debug\net6.0\Aula de LINQ.runtimeconfig.json
+C:\Users\caua.labes\source\repos\Aula de LINQ\bin\Debug\net6.0\Aula de LINQ.dll
+C:\Users\caua.labes\source\repos\Aula de LINQ\bin\Debug\net6.0\Aula de LINQ.pdb
+C:\Users\caua.labes\source\repos\Aula de LINQ\obj\Debug\net6.0\Aula de LINQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\caua.labes\source\repos\Aula de LINQ\obj\Debug\net6.0\Aula de LINQ.AssemblyInfoInputs.cache
+C:\Users\caua.labes\source\repos\Aula de LINQ\obj\Debug\net6.0\Aula de LINQ.AssemblyInfo.cs
+C:\Users\caua.labes\source\repos\Aula de LINQ\obj\Debug\net6.0\Aula de LINQ.csproj.CoreCompileInputs.cache
+C:\Users\caua.labes\source\repos\Aula de LINQ\obj\Debug\net6.0\Aula de LINQ.dll
+C:\Users\caua.labes\source\repos\Aula de LINQ\obj\Debug\net6.0\refint\Aula de LINQ.dll
+C:\Users\caua.labes\source\repos\Aula de LINQ\obj\Debug\net6.0\Aula de LINQ.pdb
+C:\Users\caua.labes\source\repos\Aula de LINQ\obj\Debug\net6.0\Aula de LINQ.genruntimeconfig.cache
+C:\Users\caua.labes\source\repos\Aula de LINQ\obj\Debug\net6.0\ref\Aula de LINQ.dll
