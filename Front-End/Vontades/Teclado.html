@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .teclado {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        #carta {
+            
+            flex-wrap: wrap;
+            color: white;
+            border-bottom: solid;
+            font-family: monospace;
+            font-size: 30px;
+        }
+
+        .tecla {
+            position: relative;
+            width: 2em;
+            height: 2em;
+            transform: rotateX(30deg);
+            border-radius: .2em;
+            border: 1px solid #3f3f3f;
+            box-shadow: 0 .3em 0 .1em #3f3f3f;
+            transition: all 150ms;
+            margin: 5px;
+        }
+
+
+        .tecla:active {
+            transform: rotateX(30deg) translateY(.3em);
+            box-shadow: 0 0 0 0 #3f3f3f;
+        }
+
+        .spaco {
+            position: relative;
+            width: 7em;
+            height: 2em;
+            transform: rotateX(30deg);
+            border-radius: .2em;
+            border: 1px solid #3f3f3f;
+            box-shadow: 0 .3em 0 .1em #3f3f3f;
+            transition: all 150ms;
+            margin: 5px;
+        }
+
+        .spaco:active {
+            transform: rotateX(30deg) translateY(.3em);
+            box-shadow: 0 0 0 0 #3f3f3f;
+        }
+
+        .conjunto {
+            margin-top: 70px;
+        }
+
+        body {
+            margin: 15px;
+        }
+
+        .enter {
+            position: relative;
+            width: 5em;
+            height: 2em;
+            transform: rotateX(30deg);
+            border-radius: .2em;
+            border: 1px solid #3f3f3f;
+            box-shadow: 0 .3em 0 .1em #3f3f3f;
+            transition: all 150ms;
+            margin: 5px;
+        }
+
+        .enter:active {
+            transform: rotateX(30deg) translateY(.3em);
+            box-shadow: 0 0 0 0 #3f3f3f;
+        }
+
+        p {
+            font-family: monospace;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            margin: 30px;
+        }
+
+        h6 {
+            font-size: 30px;
+        }
+
+        .simbolos {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-top: 60px;
+        }
+
+        span {
+            animation: blink 1s steps(1, end) infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+
+    <div id="carta">
+
+    </div>
+    <div class="conjunto">
+        <div class="teclado">
+            <button class="tecla" onclick="get('1')">1</button>
+            <button class="tecla" onclick="get('2')">2</button>
+            <button class="tecla" onclick="get('3')">3</button>
+            <button class="tecla" onclick="get('4')">4</button>
+            <button class="tecla" onclick="get('5')">5</button>
+            <button class="tecla" onclick="get('6')">6</button>
+            <button class="tecla" onclick="get('7')">7</button>
+            <button class="tecla" onclick="get('8')">8</button>
+            <button class="tecla" onclick="get('9')">9</button>
+            <button class="tecla" onclick="get('0')">0</button>
+            <button class="spaco" onclick="remove()">return</button>
+        </div>
+        <div class="teclado">
+            <button class="tecla" onclick="get('Q')">Q</button>
+            <button class="tecla" onclick="get('W')">W</button>
+            <button class="tecla" onclick="get('E')">E</button>
+            <button class="tecla" onclick="get('R')">R</button>
+            <button class="tecla" onclick="get('T')">T</button>
+            <button class="tecla" onclick="get('Y')">Y</button>
+            <button class="tecla" onclick="get('U')">U</button>
+            <button class="tecla" onclick="get('I')">I</button>
+            <button class="tecla" onclick="get('O')">O</button>
+            <button class="tecla" onclick="get('P')">P</button>
+            <button class="enter" onclick="enter()">enter</button>
+        </div>
+        <div class="teclado">
+            <button class="enter" onclick="tab()">Tab</button>
+            <button class="tecla" onclick="get('A')">A</button>
+            <button class="tecla" onclick="get('S')">S</button>
+            <button class="tecla" onclick="get('D')">D</button>
+            <button class="tecla" onclick="get('F')">F</button>
+            <button class="tecla" onclick="get('G')">G</button>
+            <button class="tecla" onclick="get('H')">H</button>
+            <button class="tecla" onclick="get('J')">J</button>
+            <button class="tecla" onclick="get('K')">K</button>
+            <button class="tecla" onclick="get('L')">L</button>
+            <button class="tecla" onclick="get('Ç')">Ç</button>
+        </div>
+        <div class="teclado">
+            <button class="enter" onclick="caps()">CapsLock</button>
+            <button class="tecla" onclick="get('Z')">Z</button>
+            <button class="tecla" onclick="get('X')">X</button>
+            <button class="tecla" onclick="get('C')">C</button>
+            <button class="tecla" onclick="get('V')">V</button>
+            <button class="tecla" onclick="get('B')">B</button>
+            <button class="tecla" onclick="get('N')">N</button>
+            <button class="tecla" onclick="get('M')">M</button>
+            <button class="tecla" onclick="get(',')">,</button>
+            <button class="tecla" onclick="get('.')">.</button>
+        </div>
+        <div class="teclado">
+            <button class="enter" onclick="simbolos()">simbolos</button>
+            <button class="spaco" onclick="spaco()">___________</button>
+            <button class="tecla" onclick="del()">Del</button>
+        </div>
+        <p id="cps"></p>
+    </div>
+    <div id="simbolo" class="simbolos">
+
+    </div>
+</body>
+<script>
+    var posiçoes = 0
+    var letras = ''
+    var CapsLock = false
+    var simb = false
+    document.getElementById("carta").innerHTML = `<span>|</span>`
+    function caps() {
+        if (CapsLock == false) {
+            CapsLock = true
+            document.getElementById("cps").innerHTML = "O CapsLock está ativado"
+        }
+        else if (CapsLock == true) {
+            CapsLock = false
+            document.getElementById("cps").innerHTML = ""
+        }
+    }
+    function get(item) {
+        if (CapsLock == false) {
+            letras += item.toLowerCase()
+            document.getElementById("carta").innerHTML = letras + `<span>|</span>`
+        }
+        else {
+            letras += item
+            document.getElementById("carta").innerHTML = letras + `<span>|</span>`
+        }
+        console.log(letras.length)
+    }
+    function remove() {
+        var posiçoes = letras.length - 1
+        if (letras[posiçoes] == ">" && letras[posiçoes - 1] == "r" && letras[posiçoes - 2] == "b" && letras[posiçoes - 3] == "<") {
+            letras = letras.slice(0, -5)
+        }
+        else {
+            letras = letras.slice(0, -1)
+        }
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
+    }
+    function del() {
+        letras = ""
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
+    }
+    function enter() {
+        letras += `<br>` + " "
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
+    }
+    function tab() {
+        letras += "___"
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
+    }
+    function spaco() {
+        letras += " "
+        document.getElementById("carta").innerHTML = letras + `<span>|</span>`
+    }
+    function simbolos() {
+        if (simb == false) {
+            simb = true
+            document.getElementById("simbolo").innerHTML = `
+                <button class="tecla" onclick="get('#')">#</button>
+                <button class="tecla" onclick="get('$')">$</button>
+                <button class="tecla" onclick="get('%')">%</button>
+                <button class="tecla" onclick="get('&')">&</button>
+                <button class="tecla" onclick="get('*')">*</button>
+                <button class="tecla" onclick="get('?')">?</button>
+                <button class="tecla" onclick="get('=')">=</button>
+                <button class="tecla" onclick="get('@')">@</button>
+                <button class="tecla" onclick="get('!')">!</button>
+                <button class="tecla" onclick="get('+')">+</button>
+                <button class="tecla" onclick="get('/')">/</button>
+                <button class="tecla" onclick="get('°')">°</button>
+                <button class="tecla" onclick="get('<')"><</button>
+                <button class="tecla" onclick="get('>')">></button>
+                <button class="tecla" onclick="get(';')">;</button>
+                <button class="tecla" onclick="get(':')">:</button>
+                <button class="tecla" onclick="get('(')">(</button>
+                <button class="tecla" onclick="get(')')">)</button>
+                <button class="tecla" onclick="get('[')">[</button>
+                <button class="tecla" onclick="get(']')">]</button>
+                <button class="tecla" onclick="get('{')">{</button>
+                <button class="tecla" onclick="get('}')">}</button>`
+        }
+        else if (simb == true) {
+            simb = false
+            document.getElementById("simbolo").innerHTML = ""
+        }
+
+    }
+</script>
+
+</html>
