@@ -1,0 +1,57 @@
+a {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 12px;
+    color: white;
+    font-family: monospace;
+    border: 0;
+    padding: 12px;
+    font-size: 16px;
+    border: solid white 1px;
+}
+.a{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+a:active {
+    margin-bottom: 5px;
+    margin-top: 15px;
+
+}
+
+div {
+    border-radius: 10px;
+    padding: 2px;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    background-image: url(./imagens/13964381-buraco-negro-gigantesco-conceito-de-espaco-ilustracaoial-vetor.jpg);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
+}
+h2{
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+    display: flex;
+    margin: 30px;
+}
+
+@media screen and (max-width: 920px) {
+    body {
+        background-image: url(./imagens/D3RZ7R_X4AArO_i.jpg);
+        background-repeat: no-repeat;
+        background-size: 250%;
+    }
+}
