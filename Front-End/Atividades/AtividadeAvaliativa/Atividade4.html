@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade4</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="header">
+
+            <div class="logo">
+
+                <div class="atividadesh">
+
+                    <p>Atividades</p>
+                    <div class="linksh">
+                        <ol>
+                            <li><a href="./hub.html">Atividade</a></li>
+                            <li><a href="./Atividade2.html">Atividade</a></li>
+                            <li><a href="./Atividade3.html">Atividade</a></li>
+                            <li><a href="Atividade4.html">Atividade</a></li>
+                            <li><a href="Atividade5.html">Atividade</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="marcas">
+                    <h2 class="nomemarca">gartola</h2>
+                    <img src="./imagens/logo marca.png" alt="Logo marca" width="150px" height="150px">
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="texto">
+        <p>Você esta na Atividade 4</p>
+    </div>
+
+    <div class="formulario">
+        <label for="peso">Peso</label>
+        <input type="number" id="peso" placeholder="kg">
+
+        <label for="altura">Altura</label>
+        <input type="number" id="altura" placeholder="cm">
+
+    </div>
+    <div class="bot5">
+        <button class="button" onclick="imc()">Calcular</button>
+    </div>
+    <div class="menor">
+        <p id="text"></p>
+        <p id="imc"></p>
+    </div>
+    <script>
+        function imc() {
+            var peso = parseFloat(document.getElementById("peso").value)
+            var altura = parseFloat(document.getElementById("altura").value)
+            var text = document.getElementById("text")
+            var metros = (altura / 100)
+            var alt = (metros * metros)
+            var imc = (peso / alt)
+
+            imc.innerHTML = imc
+
+            if (imc < 17.0) {
+                text.innerHTML = "Muito baixo"
+            }
+            if (imc >= 17.0 && imc < 18.5) {
+                text.innerHTML = "Abaixo do peso"
+            }
+            if (imc >= 18.5 && imc < 25.0) {
+                text.innerHTML = "Peso normal"
+            }
+            if (imc >= 25.0 && imc < 30.0) {
+                text.innerHTML = "Acima do peso"
+            }
+            if (imc >= 30.00 && imc < 35.0) {
+                text.innerHTML = "Obesidade 1"
+            }
+            if (imc >= 35.00 && imc < 40.00) {
+                text.innerHTML = "Obesidade 2"
+            }
+            if (imc >= 40.00) {
+                text.innerHTML = "Obesidade 3"
+            }
+        }
+
+    </script>
+</body>

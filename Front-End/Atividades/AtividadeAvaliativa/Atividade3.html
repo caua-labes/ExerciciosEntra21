@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade3</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="header">
+
+            <div class="logo">
+
+                <div class="atividadesh">
+
+                    <p>Atividades</p>
+                    <div class="linksh">
+                        <ol>
+                            <li><a href="./hub.html">Atividade</a></li>
+                            <li><a href="./Atividade2.html">Atividade</a></li>
+                            <li><a href="./Atividade3.html">Atividade</a></li>
+                            <li><a href="./Atividade4.html">Atividade</a></li>
+                            <li><a href="./Atividade5.html">Atividade</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="marcas">
+                    <h2 class="nomemarca">gartola</h2>
+                    <img src="./imagens/logo marca.png" alt="Logo marca" width="150px" height="150px">
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+    <div class="texto">
+        <p>Você esta na Atividade 3</p>
+    </div>
+
+    <div class="formulario">
+        <label for="nota1">1°nota</label>
+        <input type="number" id="nota1">
+
+        <label for="nota2">2°nota</label>
+        <input type="number" id="nota2">
+
+        <label for="nota3">3°nota</label>
+        <input type="number" id="nota3">
+
+        <label for="frequencia">Dias de presença</label>
+        <input type="number" id="frequencia">
+        <label for="fal">Total de dias</label>
+        <input type="number" id="fal">
+
+    </div>
+    <div class="bot5">
+        <button class="button" onclick="nota()">Enviar</button>
+    </div>
+    <div class="menor">
+        <p id="text"></p>
+        <p id="soma"></p>
+    </div>
+
+
+</body>
+<script>
+    function nota() {
+        var n1 = parseInt(document.getElementById("nota1").value)
+        var n2 = parseInt(document.getElementById("nota2").value)
+        var n3 = parseInt(document.getElementById("nota3").value)
+        var freq = parseInt(document.getElementById("frequencia").value)
+        var fal = parseInt(document.getElementById("fal").value)
+        var text = document.getElementById("text")
+
+        var present = (freq / fal)
+        var soma = (n1 + n2 + n3) / 3
+
+        document.getElementById("soma").innerHTML = "A média é " + soma.toFixed(1)
+        console.log(soma < 7 || freq < 0.75)
+        if (soma < 7 || present < 75) {
+            document.getElementById("text").innerHTML = "Você reprovou"
+        }
+        if (soma >= 7 && present >= 0.75) {
+            document.getElementById("text").innerHTML = "Você passou"
+        }
+    }
+</script>
+
+</html>

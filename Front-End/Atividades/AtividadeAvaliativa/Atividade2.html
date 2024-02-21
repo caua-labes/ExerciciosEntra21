@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade2</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="header">
+
+            <div class="logo">
+
+                <div class="atividadesh">
+
+                    <p>Atividades</p>
+                    <div class="linksh">
+                        <ol>
+                            <li><a href="./hub.html">Atividade</a></li>
+                            <li><a href="./Atividade2.html">Atividade</a></li>
+                            <li><a href="./Atividade3.html">Atividade</a></li>
+                            <li><a href="./Atividade4.html">Atividade</a></li>
+                            <li><a href="Atividade5.html">Atividade</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="marcas">
+                    <h2 class="nomemarca">gartola</h2>
+                    <img src="./imagens/logo marca.png" alt="Logo marca" width="150px" height="150px">
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="texto">
+        <p>Você esta na Atividade 2</p>
+    </div>
+
+    <div class="formulario">
+        <label for="Idade">Idade</label>
+        <input type="number" id="Idade">
+
+    </div>
+    <div class="bot5">
+        <button class="button" onclick="idade()">Enviar</button>
+    </div>
+
+    <div class="menor">
+        <p id="text"></p>
+    </div>
+
+
+
+    <script>
+        function idade() {
+            var imput = document.getElementById("Idade").value
+            var text = document.getElementById("text")
+            if (imput < 18) {
+                text.innerHTML = "Você é menor de idade"
+            }
+            if (imput >= 18) {
+                text.innerHTML = "Você é maior de idade"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
